@@ -1,0 +1,10 @@
+@media screen and (max-width: 1280px) and (min-width: 769px) {
+    .partnership_hero_section {
+        height: 50vh;
+        display: inline-block;
+    }
+
+    .partnership_business_section {
+        height: max-content;
+    }
+}
