@@ -13,12 +13,13 @@
     position: relative;
     margin-bottom: 50px;
     height: 80vh;
+    /* max-width: 100%; */
     overflow: hidden;
 }
 
 .partnership_hero_section>img {
     filter: brightness(50%);
-    width: 100%;
+    max-width: 100%;
 }
 
 .partnership_hero_content {
@@ -231,16 +232,21 @@
 
 /* Our Business Blog Section */
 
-.partnership_blog {
+/* .partnership_blog {
     padding: 50px 0;
     margin: 50px 0;
     display: flex;
     justify-content: center;
     background-color: #F8F9FB;
-}
+} */
 
-.partnership_blog_section {
-    width: 70%;
+.partnership_blog{
+    padding: 50px 0;
+    margin: 50px 0;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    background-color: #F8F9FB;
 }
 
 .partnership_blog_headings {
@@ -291,4 +297,128 @@
     padding: 10px;
     border-radius: 50%;
     background-color: #f25a07;
+}
+
+
+
+/* Responsive CSS */
+
+@media screen and (max-width: 768px) {
+
+    /* Hero Section */
+
+    /* removed landscape hero image */
+
+    .partnership_hero_section>img {
+        display: none;
+    }
+
+    /* added new portrait hero image */
+
+    .partnership_hero_section {
+        background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+            url('/images/responsive-hero-image.jpg');
+        background-size: cover;
+    }
+
+    .partnership_hero_btns a {
+        display: block;
+    }
+
+    /* Partnership Business Corporate Solutions */
+
+    .partnership_solutions {
+        display: inline-block;
+    }
+
+    .partnership_solutions_right>img {
+        display: none;
+    }
+
+    .partnership_solutions_section {
+        margin: 0;
+        width: 100%;
+        padding: 0.5rem;
+        display: block;
+    }
+
+    /* Work Based Projects */
+
+    .partnership_projects {
+        display: block;
+    }
+
+    .partnership_projects_section {
+        width: 100%;
+    }
+
+    .partnership_projects_cards_container {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Our Business Services */
+
+    .partnership_services_cards_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Innovative Leader */
+
+    .partnership_innovation_content {
+        display: block;
+        text-align: center;
+    }
+
+    .partnership_innovation_content>div {
+        margin: 40px 0;
+    }
+
+    /* Business Corporate Solutions */
+
+    .partnership_business_section {
+        max-height: 100%;
+    }
+
+    .partnership_business_img,
+    .partnership_business_img>img {
+        height: 100%;
+    }
+
+    .partnership_business_content {
+        width: 100%;
+        left: 50%;
+        text-align: center;
+    }
+
+    .partnership_business_content h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Our Business Blog */
+
+    .partnership_blog_cards_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .partnership_blog_card {
+        height: max-content;
+        width: min-content;
+    }
+}
+
+/* Responsive CSS for 1280 - 769 sizes */
+
+@media screen and (max-width: 1280px) and (min-width: 769px) {
+    .partnership_hero_section {
+        height: 50vh;
+        display: inline-block;
+    }
+
+    .partnership_business_section {
+        height: max-content;
+    }
 }
